@@ -4,7 +4,7 @@
 ## cacheSolve shows the inverse of a matrix if is in memory or computes the inverse and then shows the inverse
 
 ## Write a short comment describing this function
-## makeCacheMatrix uses scoping rules
+## makeCacheMatrix uses scoping rules and stores matrices in memory
 
 makeCacheMatrix <- function(X = matrix()) {
 inverse <- NULL
@@ -19,7 +19,8 @@ list(set=set,get=get,setinverse=setinverse,getinverse=getinverse)
 }
 
 ## Write a short comment describing this function
-## cacheSolve avoids determinants and uses orthogonal descomposition
+## cacheSolve uses corpcor, a library that avoids determinants and uses orthogonal descomposition
+## note: this function will try to load corpcor library and if it's not installed will try to install the library
 
 cacheSolve <- function(X, ...) 
 {
